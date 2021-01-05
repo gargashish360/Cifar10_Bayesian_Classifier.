@@ -8,7 +8,6 @@ There are total of 50,000 training images of dimensions 32X32X3 divided into 10 
 
 
 ## Implementation:
-Bayesian rule to be used is stated as:
 ![image](https://user-images.githubusercontent.com/42828760/103663242-8d963280-4f79-11eb-9789-7a8f16fd5389.png)
 <p align="justify">
 To use the above rule, we computed the mean and variance of the three color channels for each class. The function def cifar10_naivebayes_learn(Xf,Y) computes the normal distribution parameters (mu,sigma,p) for all ten classes(mu and sigma are 10X3 and prior p is 10X1). Finally, the function def cifar10_classifier_naivebayes(x,mu,sigma,p) returns the Bayesian optimal class c for the sample x.
